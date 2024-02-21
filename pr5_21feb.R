@@ -28,6 +28,7 @@ print(cuartiles_numero_artefactos)
 hist_numero_artefactos <- hist(archaeology_data$NúmerodeArtefactos,
                                main = "Número de artefactos",
                                col = "pink")
+#la asimetría es negativa, porque la media es menor que la mediana
 
 #4
 cajabigote_numero_artefactos <- boxplot(archaeology_data$NúmerodeArtefactos,
@@ -57,13 +58,16 @@ total_num_artefactos <- sum(archaeology_data$NúmerodeArtefactos)
 
 #8
 mediana_num_artefactos <- median(archaeology_data$NúmerodeArtefactos)
+print(mediana_num_artefactos)
 
 #9
 desviacion_estandar <- sd(archaeology_data$NúmerodeArtefactos)
 print(desviacion_estandar)
 
 #10
-which.max(cross_artyac)
+maximo_artefactos <- which.max(archaeology_data$NúmerodeArtefactos)
+print(maximo_artefactos)
+#el yacimiento con el mayor número de artefactos es el Site 3, con 1000
 
 #11
 tabla_resumen <- table(mediana_num_artefactos,media_numero_artefactos, desviacion_estandar)
